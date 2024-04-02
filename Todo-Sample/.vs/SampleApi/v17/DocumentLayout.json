@@ -1,0 +1,323 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\sampleapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\sampleapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\controllers\\notesdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\controllers\\notesdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\controllers\\userdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\controllers\\userdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\migrations\\notesdetails\\20240329175701_initialnotesdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\migrations\\notesdetails\\20240329175701_initialnotesdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\migrations\\notesdetails\\notesdetailscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\migrations\\notesdetails\\notesdetailscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\migrations\\userdetailscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\migrations\\userdetailscontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\models\\notesdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\models\\notesdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\models\\userdetailscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\models\\userdetailscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\models\\notesdetailscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\models\\notesdetailscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\models\\userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|c:\\users\\manjunathsk\\source\\repos\\sampleapi\\sampleapi\\migrations\\20240326184556_userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68F91A8B-A5A5-495C-8DF5-4C249E9244EB}|SampleApi\\SampleApi.csproj|solutionrelative:sampleapi\\migrations\\20240326184556_userdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 208,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SampleApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SampleApi\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-02T16:11:28.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NotesDetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\NotesDetailsController.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Controllers\\NotesDetailsController.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\NotesDetailsController.cs",
+              "RelativeToolTip": "SampleApi\\Controllers\\NotesDetailsController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAYwAsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:44:57.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Program.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Program.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Program.cs",
+              "RelativeToolTip": "SampleApi\\Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAAB4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:18:34.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\appsettings.json",
+              "RelativeDocumentMoniker": "SampleApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\appsettings.json",
+              "RelativeToolTip": "SampleApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-26T18:21:55.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SampleApi.http",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\SampleApi.http",
+              "RelativeDocumentMoniker": "SampleApi\\SampleApi.http",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\SampleApi.http",
+              "RelativeToolTip": "SampleApi\\SampleApi.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-27T18:55:40.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240329175701_InitialNotesDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329175701_InitialNotesDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\NotesDetails\\20240329175701_InitialNotesDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329175701_InitialNotesDetails.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\NotesDetails\\20240329175701_InitialNotesDetails.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T17:57:01.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "SampleApi\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\WeatherForecast.cs",
+              "RelativeToolTip": "SampleApi\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T16:16:25.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotesDetailsContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\NotesDetailsContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\NotesDetails\\NotesDetailsContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\NotesDetailsContextModelSnapshot.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\NotesDetails\\NotesDetailsContextModelSnapshot.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:39:21.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDetailsContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\UserDetailsContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\UserDetailsContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\UserDetailsContextModelSnapshot.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\UserDetailsContextModelSnapshot.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:39:01.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDetailsController.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\UserDetailsController.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Controllers\\UserDetailsController.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\UserDetailsController.cs",
+              "RelativeToolTip": "SampleApi\\Controllers\\UserDetailsController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAAYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T06:40:29.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NotesDetailsContext.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\NotesDetailsContext.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Models\\NotesDetailsContext.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\NotesDetailsContext.cs",
+              "RelativeToolTip": "SampleApi\\Models\\NotesDetailsContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T09:20:33.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20240329095322_InitialNotesDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\NotesDetails\\20240329095322_InitialNotesDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T09:53:23.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotesDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\NotesDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Models\\NotesDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\NotesDetails.cs",
+              "RelativeToolTip": "SampleApi\\Models\\NotesDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T09:14:16.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserDetailsContext.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\UserDetailsContext.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Models\\UserDetailsContext.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\UserDetailsContext.cs",
+              "RelativeToolTip": "SampleApi\\Models\\UserDetailsContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:08:46.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20240329175242_InitialNotesDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\NotesDetails\\20240329175242_InitialNotesDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T17:52:42.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\UserDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Models\\UserDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Models\\UserDetails.cs",
+              "RelativeToolTip": "SampleApi\\Models\\UserDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T17:35:50.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "SampleApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T06:33:34.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20240326184556_UserDetails.cs",
+              "DocumentMoniker": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\20240326184556_UserDetails.cs",
+              "RelativeDocumentMoniker": "SampleApi\\Migrations\\20240326184556_UserDetails.cs",
+              "ToolTip": "C:\\Users\\ManjunathSK\\source\\repos\\SampleApi\\SampleApi\\Migrations\\20240326184556_UserDetails.cs",
+              "RelativeToolTip": "SampleApi\\Migrations\\20240326184556_UserDetails.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:45:56.997Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
