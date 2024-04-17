@@ -1,0 +1,159 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<div class="bg-body-secondary text-center px-2 rounded-2">
+  <h3>hi ,<span title="UserName">{{usr_id>0?UserName:"Guest"}}({{User_id}})</span></h3>
+  <p class="display-6 fw-bold">To-Do's</p>
+</div>
+
+<!-- Form -->
+
+<!-- if User Id>0 in session -->
+<div class="form form-control formSubmitNotes" *ngIf="usr_id>0;else formisdisabled"
+  [class.submitted]="service.TodoFormSubmitted">
+  <form #form="ngForm" (submit)="onsubmitNotes(form)" >
+    <div >
+      <!-- <p for="inputId">UserID({{User_id}})</p> -->
+      <input type="hidden" id="inputId" name="UserId" #userId="ngModel"
+      [(ngModel)]="service.TodoDataObj.userId" >
+    </div>
+
+    <div class="form-control">
+  <input type="text" class="form-control is-valid m-2" #userTitle="ngModel" [(ngModel)]="service.TodoDataObj.userTitle" name="UserTitle" id="inputTitle" placeholder="Title" required
+   [class.is-invalid]="userTitle.touched && userTitle.value==null">
+</div>
+
+<div class="form-control">
+  <input type="text" class="form-control is-valid m-2" #userMessage="ngModel" [(ngModel)]="service.TodoDataObj.userMessage" name="UserMessage" id="inputMessage" placeholder="Message" required
+  [class.is-invalid]="userMessage.touched && userMessage.value==null">
+</div>
+
+  <button type="submit" class="NotesAddBtn bg-info rounded-2 m-1" title="Add Task" id="NotesAddBtn">Add</button>
+  <div class="invalid-feedback" title="Input Validation Message Section">
+    Validation message
+  </div>
+  <!-- TODO: This is for server side, there is another version for browser defaults -->
+</form>
+</div>
+
+<div class="To-do-container">
+
+      <div class=" carousel-dark px-3" *ngFor="let itemUser of service.list_User" >
+        <div *ngFor="let itemTodo of service.list_Todo">
+          <div *ngIf="itemUser.userId==usr_id ">
+            <!-- <p>User(Count): {{service.list_Todo.length}}</p> -->
+          <div *ngIf="itemTodo.userId==itemUser.userId">
+
+<div class="card Todo-Card">
+
+<div class="container-fluid">
+  <div class="alert-warning" *ngIf="itemTodo.getid<1">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Warning!</strong> There's no Account found in session , Kindly
+    <a routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">Log in</a>
+  </div>
+
+          <div class="card-header  bg-dark-subtle row" >
+
+<div class="col-6" >
+
+  <h5 class="card-title" title="Task Title">
+    <!-- <label for="userTitle">Title</label><pre></pre> -->
+
+  <input  style="min-height:auto;min-width:100%;" type="text" id="userTitle" name="userTitle" #userTitle="ngModel"
+  [(ngModel)]="itemTodo.userTitle" [value]="itemTodo.userTitle"  disabled title="Title">
+</h5>
+
+</div>
+<div class="col-6 text-end"><button class="btn" type="button" (click)="deleteNote(itemTodo)">
+<span  title="Remove"><i class="bi bi-trash btn btn-outline-danger"></i></span></button>
+</div>
+          </div>
+        <div class="card-body">
+            <!-- <label for="userMessage">Message</label><pre></pre> -->
+          <input style="min-height:auto;min-width:100%;" class="card-text " type="text" id="userMessage" name="UserId" #userMessage="ngModel"
+          [(ngModel)]="itemTodo.userMessage" [value]="itemTodo.userMessage" disabled title="Message">
+
+        </div>
+
+        <div class="card-footer row ">
+          <div class="col-6" ><p title="UserName"><span> - {{itemUser.userName}}</span></p></div>
+<div class="col-6 text-end"><button type="button" (click)="settoeditmode(itemTodo)">
+
+<span  title="Edit" ><h5><i class="bi bi-pencil-square btn"></i></h5></span>
+</button></div>
+
+        </div>
+      </div>
+
+        <!-- <div id="formeditdiv">
+          <form #form="ngForm" (submit)="onFormEdit(itemTodo)">
+            <input type="hidden" name="userId"  [value]="itemTodo.id">
+          <label>Title</label>
+          <div class="form-control">
+
+            <input type="text" class="form-control is-valid m-2"  #userTitle="ngModel"
+            [(ngModel)]="service.TodoDataObj.userTitle" name="userTitle" id="userTitle"
+            placeholder="Title" [value]="itemTodo.userTitle">
+          </div>
+
+          <div class="form-control">
+
+          <label>Message</label>
+          <input type="text" class="form-control is-valid m-2"  #userMessage="ngModel"
+          [(ngModel)]="service.TodoDataObj.userMessage" name="userMessage" id="userMessage"
+          placeholder="Message" [value]="itemTodo.userMessage">
+          </div>
+      <button type="submit" class="bg-info rounded-2 m-1" title="Update Task">Update</button>
+
+
+        </form>
+
+        </div> -->
+
+      </div>
+    </div>
+    </div>
+
+      </div>
+      </div>
+      <div *ngIf="usr_id<1">
+        <div class="alert-warning">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Warning!</strong> There's no Account found in session , Kindly
+          <a routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">Log in</a>
+        </div>
+      </div>
+</div>
+      <!-- <ng-template #ifUsernotInTodo>
+        <div class="alert-warning">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Warning!</strong> There's no Data found Create New Task
+        </div>
+      </ng-template> -->
+
+      <ng-template #ifUserNotInSession>
+        <div class="alert-warning">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Warning!</strong> There's no Account found in session , Kindly
+          <a class="text-black" routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">Log in</a>
+        </div>
+      </ng-template>
+           <ng-template #formisdisabled>
+        <div class="alert-danger">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <strong>Warning!</strong> To-do Form is Unavailable untill user Signed in
+
+        </div>
+      </ng-template>
+
+      <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+

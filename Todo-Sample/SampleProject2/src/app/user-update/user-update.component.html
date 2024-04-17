@@ -1,0 +1,85 @@
+
+
+<div class="">
+
+<div *ngFor="let user of service.list_User">
+  <!-- <p>user.userid:{{user.userId}}  & usr_id:{{usr_Id}}</p> -->
+  <div class="container-border" *ngIf="user.userId === usr_Id;">
+    <div *ngIf="usr_Id<1">
+      <div class="alert-danger">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning!</strong> Kindly sign in to get User Details
+      </div>
+    </div>
+
+<div class="text-container">
+  <label for="UserName"><h5>User Name</h5></label><p></p>
+  <p class="text-center"><span>{{user.userName}}</span></p>
+</div>
+<div class="text-container">
+  <label for="userDob"><h5>User DOB</h5></label><p></p>
+  <p class="text-center"><span>{{user.userDob.toString().substring(0,2)+"/"+user.userDob.toString().substring(2,4)
+  +"/"+user.userDob.toString().substring(4)}}</span></p>
+</div>
+<div class="text-container">
+  <label for="userGender"><h5>User Gender</h5></label><p></p>
+  <p class="text-center"><span>{{user.userGender}}</span></p>
+</div>
+<div>
+  <a class="btn btn-info" (click)="Edit(user)">Edit </a>
+</div>
+</div>
+
+</div>  <!--End For -->
+
+<div class="form form-control formSubmitNotes" id="formSubmitNotes" *ngIf="usr_Id>0">
+
+  <form #form="ngForm" (submit)="UpdateUserform(form)" >
+
+      <!-- <p for="inputId">UserID({{User_id}})</p> -->
+
+
+      <input type="hidden" class="form-control" name="userId" #userId="ngModel"  [(ngModel)]="service.UserDataObj.userId"
+      title="User Name"  placeholder="User Name">
+      <input type="hidden" class="form-control" name="userMail" #userMail="ngModel"  [(ngModel)]="service.UserDataObj.userMail"
+      title="User mail"  placeholder="User Mail">
+      <input type="hidden" class="form-control" name="userPassword" #userPassword="ngModel"  [(ngModel)]="service.UserDataObj.userPassword"
+      title="User password"  placeholder="User Pasword">
+
+    <div class="form-control">
+      <label for="userName">User Name <span class="text-danger">*</span></label>
+      <input type="text" class="form-control"  name="userName" #userName="ngModel"  [(ngModel)]="service.UserDataObj.userName"
+      title="User Name"  placeholder="User Name" required>
+      <div *ngIf="UpdateSubmitted && userName.touched && userName==null"><span class="text-danger">UserName is required</span></div>
+</div>
+
+<div class="form-control">
+      <label for="userName">User Gender </label>
+      <input type="text" class="form-control" name="userGender"  placeholder="Gender(M/F)" #userGender="ngModel"
+      [(ngModel)]="service.UserDataObj.userGender" title="User Name" minlength="1" maxlength="1">
+</div>
+
+<div class="form-control">
+      <label for="userName">User DOB(ddmmyyyy) </label>
+      <input type="text" class="form-control" name="userDob"  placeholder="DOB(ddmmyyyy)" #userDob="ngModel"
+      [(ngModel)]="service.UserDataObj.userDob" title="User DOB" minlength="8" maxlength="8">
+</div>
+
+  <button type="submit" class="NotesAddBtn bg-info rounded-2 m-1" title="Add Task" id="UserUpdatebtn">Update</button>
+  <!-- TODO: This is for server side, there is another version for browser defaults -->
+</form>
+</div>
+
+
+</div>
+
+<ng-template #notloggedin>
+  <div class="alert-danger">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Warning!</strong> Kindly sign in to get User Details
+  </div>
+</ng-template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

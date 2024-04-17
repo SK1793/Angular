@@ -1,0 +1,86 @@
+.alert-info {
+    padding: 20px;
+    background-color: #22afe7;
+    color: white;
+  }
+  .alert-danger {
+    padding: 20px;
+    background-color: #eb3124;
+    color: white;
+  }.alert-done {
+    padding: 20px;
+    background-color: #25e054;
+    color: white;
+  }.alert-warning {
+    padding: 20px;
+    background-color: #e0e250;
+    color: white;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+    }
+    .fixed.scroll {
+    transform: translateY(50px);
+    }
+
+    .formSubmitNotes{
+      margin-bottom: 20px;
+    }
+
+    .Todo-Card{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    form.submitted input.ng-invalid{
+      border-color:red;
+    }
+
+    .form{
+      margin: 10px;
+      padding: 5px;
+    }
+
+        .container-border{
+      margin: 10px;
+      padding:7px;
+      border-radius:10px;
+      border:1px solid rgb(233, 154, 35);
+    }
+
+    .text-container{
+      border-radius: 5px;
+      border: 1px solid black;
+
+    }
+
+    label{
+      text-decoration: solid;
+    }
+
+    .text-center{
+
+
+    }
