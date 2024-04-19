@@ -3,21 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { ErrorComponent } from './error/error.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
-    ErrorComponent,
-    ForgotPasswordComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,CommonModule, HttpClientModule,FormsModule,RouterModule.forRoot(routes,{bindToComponentInputs:true})
+    AppRoutingModule,CommonModule, HttpClientModule,FormsModule,RouterModule.forRoot(routes,{bindToComponentInputs:true}),
+    ReactiveFormsModule
 
   ],
   providers: [{provide: ToastrService, useClass: ToastrService}]

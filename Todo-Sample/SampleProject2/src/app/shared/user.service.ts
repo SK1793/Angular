@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.development';
 import { ToDoModel } from '../to-do-data/to-do-model.model';
 import { UserModel } from '../user-data/user-model.model';
@@ -24,7 +25,7 @@ export class UserService  {
    SignupSubmitted:boolean=false;
    SigninSubmitted:boolean=false;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router : Router) { }
 
   refreshUserList(){
     this.http.get(this.url+'/UserDetails',{headers:this.headers})
@@ -47,9 +48,7 @@ export class UserService  {
         this.list_User=value as UserModel[];
           // console.log("User Details: \n");
           // console.log(value);
-          form.form.get('userName')?.setValue('');
-          form.form.get('userDob')?.setValue('');
-          form.form.get('userGender')?.setValue('');
+          form.form.reset();
           alert("User Updated!")
           window.location.reload();
       },error(err: any) {
@@ -145,6 +144,7 @@ export class UserService  {
         console.log(val);
         this.resetForm(form);
         alert("User Added!");
+        this.router.navigate(['/signin']);
       },error(err: any) {
         alert("Some Error while Adding User(Check values try again later)");
         console.log("Error(reading Api data):\n ");

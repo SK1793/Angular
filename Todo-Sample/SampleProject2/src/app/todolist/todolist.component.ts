@@ -19,7 +19,7 @@ export class TodolistComponent implements OnInit,OnChanges{
 [x: string]: any;
 
  userid:string='';
- usr_id:number=0; usr_name:string='';
+ usr_id:number=0; usr_name:string='';usr_mail:string='';usr_pass:string='';usr_gender:string='';usr_dob:string='';
  isOptionUpdate:boolean=false;
  isLoggedin:boolean=false;
  selectedUpdateId:number=0;
@@ -55,7 +55,11 @@ constructor(public service:UserService){
       // console.log(usr_.userName);
       if(String(usr_.userId).trim()==usr_id){
           this.usr_name=usr_.userName;
-          this.usr_name=String(window.sessionStorage.setItem('userName',this.usr_name));
+          this.usr_mail=String(window.sessionStorage.setItem('userName',usr_.userName));
+          this.usr_mail=String(window.sessionStorage.setItem('userMail',usr_.userMail));
+          this.usr_pass=String(window.sessionStorage.setItem('userPass',String(usr_.userPassword)));
+          this.usr_gender=String(window.sessionStorage.setItem('userGender',usr_.userGender));
+          this.usr_dob=String(window.sessionStorage.setItem('userDob',String(usr_.userDob)));
       }
     }
   }

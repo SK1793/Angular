@@ -60,7 +60,7 @@ export class UserUpdateComponent implements OnInit{
 
   UpdateUserform(form:NgForm){
     if(form.valid){
-
+      console.log(form.form.value);
     if(form.form.get('userName')?.getRawValue==null ){
         alert('please fill all cumpulsory data ');
     }else{

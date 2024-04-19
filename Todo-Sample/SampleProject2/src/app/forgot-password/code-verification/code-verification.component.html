@@ -1,0 +1,44 @@
+<div>
+
+  <h5>Password Change</h5>
+  <button class="btn btn-info" (click)="UpdatePass()">Change</button>
+  <div class="form form-control formPassUpdate" id="formPassUpdate" *ngIf="Session_id<1 ;else loggedin">
+    <form #form="ngForm" (submit)="UpdateUserPassform(form)" >
+        <!-- <p for="inputId">UserID({{User_id}})</p> -->
+
+        <input type="hidden" class="form-control" name="userId" #userId="ngModel"  [(ngModel)]="user_id">
+        <input type="hidden" class="form-control" name="userMail" #userMail="ngModel"  [(ngModel)]="service.UserDataObj.userMail">
+        <input type="hidden" class="form-control"  name="userName" #userName="ngModel"  [(ngModel)]="service.UserDataObj.userName">
+        <input type="hidden" class="form-control" name="userGender" #userGender="ngModel" [(ngModel)]="service.UserDataObj.userGender">
+        <input type="hidden" class="form-control" name="userDob"   #userDob="ngModel" [(ngModel)]=" service.UserDataObj.userDob">
+
+      <div class="form-control">
+        <label >Enter Password <span class="text-danger">*</span></label>
+        <input type="password" class="form-control" name="userPassword"  #userPassword="ngModel"
+        [(ngModel)]="service.UserDataObj.userPassword" title="Enter password"  placeholder="Enter Pasword">
+  </div>
+
+       <div class="form-control">
+        <label >Confirm Password <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="confirmPassword"  #confirmPassword="ngModel"
+        [(ngModel)]="confirmPass" title="Confirm password"  placeholder="Confirm Pasword">
+  </div>
+
+    <button type="submit" class="NotesAddBtn bg-info rounded-2 m-1" title="Password reset" id="UserPassbtn" disabled>Update</button>
+    <!-- TODO: This is for server side, there is another version for browser defaults -->
+  </form>
+
+  </div>
+
+  <h5>Peek Password</h5>
+  <button class="btn btn-info" (click)="PeekPass()">Peek</button>
+  <div class="container PeekPass">
+    <p>Password :{{user_pass?user_pass:"NA"}}</p>
+  </div>
+
+<ng-template #loggedin>
+  <p>It seems you've already logged in. </p>
+
+</ng-template>
+
+</div>

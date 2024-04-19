@@ -58,7 +58,7 @@
         <div class="form-group row">
       <label for="inputDob" class="col-sm-1-12 col-form-label">User DOB(ddmmyyyy)</label>
       <div class="col-sm-1-12">
-        <input type="number" class="form-control" name="UserDob" id="inputDob" placeholder="User DOB(DDMMYYYY)" minlength="8" maxlength="8"
+        <input type="text" class="form-control" name="UserDob" id="inputDob" placeholder="User DOB(DDMMYYYY)" minlength="8" maxlength="8"
         #userDob="ngModel" [(ngModel)]="service.UserDataObj.userDob" [class.is-invalid]="userDob.touched && userDob==null ">
       </div>
     </div>

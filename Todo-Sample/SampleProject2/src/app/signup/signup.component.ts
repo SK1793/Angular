@@ -16,6 +16,7 @@ var isSignedIn:boolean=false;
 export class SignupComponent implements OnInit,OnChanges{
 [x: string]: any;
  UserPasswordMatch: string='';
+  isMailExist:boolean=false;
 
   constructor(public service:UserService){}
 
@@ -33,8 +34,20 @@ export class SignupComponent implements OnInit,OnChanges{
   onsubmitSignup(form:NgForm){
     this.service.SignupSubmitted=true;
     if(form.valid){
-      this.UserPasswordMatch=String(form.form.get('UserPassMatch'));
-      this.service.putUsers(form);
+      for(let _user of this.service.list_User){
+
+        if(String(form.form.get('userMail')?.getRawValue)==_user.userMail){
+          this.isMailExist=true;
+        }
+      }
+      if(this.isMailExist){
+
+        this.UserPasswordMatch=String(form.form.get('UserPassMatch'));
+        this.service.putUsers(form);
+      }else{
+        alert('user already exist with this Mail ID');
+      }
+
     }
   }
 }

@@ -1,5 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule, NgFor, NgForOf } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, NgForm } from '@angular/forms';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import emailjs from '@emailjs/browser';
+import { AppComponent } from '../app.component';
 import { UserService } from '../shared/user.service';
+import { SignupComponent } from '../signup/signup.component';
+import { TodolistComponent } from '../todolist/todolist.component';
 import { UserModel } from '../user-data/user-model.model';
 
 var mailid_:string;
@@ -8,34 +15,111 @@ var _user:UserModel;
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',
+  standalone:true,
+  imports: [RouterOutlet,SignupComponent,TodolistComponent,RouterLink,RouterLinkActive,CommonModule,
+    NgFor,NgForOf,FormsModule,AppComponent
+  ],
   styles: [
   ]
 })
 
 export class ForgotPasswordComponent implements OnInit {
   // [x:string]:any;
+mailId:string='';EnteredMail:string="";
+VerfCode:string='';Otp:string='';
+forms:FormGroup=this.fb.group({
+    to_name:'',
+    from_name:'SK',
+    message:'',
+    subject:'',
+    from_email:''
+});
 
 
-  constructor(public service:UserService){}
+  constructor(public service:UserService,private fb:FormBuilder,private router:Router){}
 
-  @Input('id') mailId ='';
   ngOnInit(): void {
+    this.mailId!=window.sessionStorage.getItem('userMail');
     if (this.mailId) {
       mailid_=this.mailId;
       this.isValidMail(mailid_);
+
+    }
+  }
+
+  VerfForm(form:NgForm){
+    if(form.valid){
+      console.log("VerfFcode: "+this.VerfCode.trim()+" ,OTP: "+form.form.get('VerfCode')?.getRawValue().trim())
+     if(this.VerfCode.trim()==form.form.get('VerfCode')?.getRawValue().trim()){
+      alert("Verification Code is Correct,Autoloading to next page")
+      this.router.navigate(['/VerifyCode']);
+
+     }else{
+      alert(" Incorrect Code ")
+
+     }
     }
   }
 
   isValidMail(mail:string){
-    for(let _user of this.service.list_User ){
-        if(_user.userMail==mailid_){
-          alert('Acc found');
+    var isMailFound:boolean=false;
+    var otpbtn=document.getElementById('BtnOTp');
+    var result=document.getElementById('Result');
+    var CodeTimeout:number=0;
+    if(mail!=null){
 
-        }else{
-          alert('Account is not registered!')
+    for(let _user of this.service.list_User ){
+        if(_user.userMail==mail){
+          alert('Acc found');
+          isMailFound=true
+          this.mailId=_user.userMail;
+          window.sessionStorage.setItem('VerificationMail',_user.userMail);
+          this.VerfCode=""+String(Math.random()).substring(2,8);
+          sessionStorage.setItem('VerificationCode', JSON.stringify({
+            value: this.VerfCode,
+            timeout: Date.now() + 1 * 60 * 1000
+          }));
+          var VerfCodeSession=window.sessionStorage.getItem('VerificationCode');
+          if(VerfCodeSession!=null)
+          CodeTimeout=JSON.parse(VerfCodeSession).timeout;
+          otpbtn?.toggleAttribute('disabled');
+
+          try{
+            emailjs.init("UfyB-rgHJPWNkFukZ");  //Initializing with Public Key
+            emailjs.send("service_d2hk2g7","template_z7in0gh",{
+              to_name: "Admin",
+              from_name: this.EnteredMail.split('@')[0]+"",
+              message: "Your Verification Code is :"+this.VerfCode,
+              subject: "Verification Code for ToDOListz",
+              from_email: this.EnteredMail+"",
+
+            });
+                alert('Verification Cod Sent');
+
+                result!.innerHTML= "Code is Sent and will be available for a minute(1:00)"+ (CodeTimeout-Date.now())/1000+"sec";
+
+          }catch(Exception){
+           console.log("Error!Some Exception caused while Sending Mail")
+          }
+
         }
     }
+    if(!isMailFound){
+      alert('Acc not found');
+
+    }
+
+  }else{
+    alert("enter Correct Mail Id to Proceed");
+  }
 
   }
+
+Verification(form:NgForm){
+  this.isValidMail(form.form.get('UserMail')?.getRawValue())
+}
+
+
+
 
 }
