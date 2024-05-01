@@ -7,7 +7,7 @@
 ![Snapshot 5](Documentation/Pictures/ForgotPassword.png)
 ![Snapshot 6](Documentation/Pictures/ForgotPassword_MailVerf.png)
 ![Snapshot 7](Documentation/Pictures/HomePage(LoggedIn1).png)
-![Snapshot 8](Documentation/Pictures/HomePage(LoggedIn2).png)
+![Snapshot 8](Documentation/Pictures/HomePage(LoggedIn2_UpdateNotes).png)
 ![Snapshot_9](Documentation/Pictures/ProfileSection.png)
 ![Snapshot 10](Documentation/Pictures/ProfileSectionUpdate.png)
 ![Snapshot 11](Documentation/Pictures/Database_table_Users.png)
