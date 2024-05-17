@@ -5,41 +5,63 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+<div class="text-center">
+  <h3 >hi <span title="UserName" class="badge badge-info"><i class="bi bi-person"></i>{{usr_id>0?UserName:"Guest"}}</span></h3>
 
-<div class="bg-body-secondary text-center px-2 rounded-2">
-  <h3>hi ,<span title="UserName">{{usr_id>0?UserName:"Guest"}}({{User_id}})</span></h3>
+</div>
+<div class="bg-body-secondary text-center px-2 rounded-2" id="NotesAddForm">
   <p class="display-6 fw-bold">To-Do's</p>
 </div>
 
-<!-- Form -->
-
-<!-- if User Id>0 in session -->
-<div class="form form-control formSubmitNotes" *ngIf="usr_id>0;else formisdisabled"
-  [class.submitted]="service.TodoFormSubmitted">
+<div class="form form-control formSubmitNotes " *ngIf="usr_id>0;else formisdisabled"
+  [class.submitted]="service.TodoFormSubmitted" >
   <form #form="ngForm" (submit)="onsubmitNotes(form)" >
+
     <div >
       <!-- <p for="inputId">UserID({{User_id}})</p> -->
       <input type="hidden" id="inputId" name="UserId" #userId="ngModel"
       [(ngModel)]="service.TodoDataObj.userId" >
     </div>
+        <div >
+      <!-- <p for="inputId">UserID({{User_id}})</p> -->
+      <input type="hidden" id="submittedDate" name="submittedDate" #submittedDate="ngModel"
+      [(ngModel)]="service.TodoDataObj.submittedDate"
+      >
+    </div>
+        <div >
+      <!-- <p for="inputId">UserID({{User_id}})</p> -->
+      <input type="hidden" id="updatedDate" name="updatedDate" #updatedDate="ngModel"
+      [(ngModel)]="service.TodoDataObj.updatedDate">
+    </div>
 
     <div class="form-control">
   <input type="text" class="form-control is-valid m-2" #userTitle="ngModel" [(ngModel)]="service.TodoDataObj.userTitle" name="UserTitle" id="inputTitle" placeholder="Title" required
    [class.is-invalid]="userTitle.touched && userTitle.value==null">
+   <p [hidden]="userTitle.value.length<51"><span class="text-red">*</span>Title Should not contain more than 50 words</p>
 </div>
 
 <div class="form-control">
   <input type="text" class="form-control is-valid m-2" #userMessage="ngModel" [(ngModel)]="service.TodoDataObj.userMessage" name="UserMessage" id="inputMessage" placeholder="Message" required
   [class.is-invalid]="userMessage.touched && userMessage.value==null">
+  <p [hidden]="userMessage.value.length<251"><span class="text-red">*</span>Message Should not contain more than 250 words</p>
+
 </div>
 
   <button type="submit" class="NotesAddBtn bg-info rounded-2 m-1" title="Add Task" id="NotesAddBtn">Add</button>
-  <div class="invalid-feedback" title="Input Validation Message Section">
-    Validation message
-  </div>
   <!-- TODO: This is for server side, there is another version for browser defaults -->
 </form>
 </div>
+
+    <div class="loader text-center" [hidden]="isListLoaded">
+      <div class="duo duo1">
+        <div class="dot dot-a"></div>
+        <div class="dot dot-b"></div>
+      </div>
+      <div class="duo duo2">
+        <div class="dot dot-a"></div>
+        <div class="dot dot-b"></div>
+      </div>
+    </div>
 
 <div class="To-do-container">
 
@@ -52,21 +74,20 @@
 <div class="card Todo-Card">
 
 <div class="container-fluid">
-  <div class="alert-warning" *ngIf="itemTodo.getid<1">
+  <!-- <div class="alert-warning" *ngIf="itemTodo.getid<1">
     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     <strong>Warning!</strong> There's no Account found in session , Kindly
     <a routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">Log in</a>
-  </div>
+  </div> -->
 
           <div class="card-header  bg-dark-subtle row" >
 
-<div class="col-6" >
+<div id="ListCard" class="col-6" >
 
   <h5 class="card-title" title="Task Title">
     <!-- <label for="userTitle">Title</label><pre></pre> -->
+    <p class="text-overflow" title={{itemTodo.userTitle}} >{{itemTodo.userTitle}}</p>
 
-  <input  style="min-height:auto;min-width:100%;" type="text" id="userTitle" name="userTitle" #userTitle="ngModel"
-  [(ngModel)]="itemTodo.userTitle" [value]="itemTodo.userTitle"  disabled title="Title">
 </h5>
 
 </div>
@@ -76,17 +97,24 @@
           </div>
         <div class="card-body">
             <!-- <label for="userMessage">Message</label><pre></pre> -->
-          <input style="min-height:auto;min-width:100%;" class="card-text " type="text" id="userMessage" name="UserId" #userMessage="ngModel"
-          [(ngModel)]="itemTodo.userMessage" [value]="itemTodo.userMessage" disabled title="Message">
+          {{itemTodo.userMessage}}
 
         </div>
 
-        <div class="card-footer row ">
-          <div class="col-6" ><p title="UserName"><span> - {{itemUser.userName}}</span></p></div>
-<div class="col-6 text-end"><button type="button" (click)="settoeditmode(itemTodo)">
 
-<span  title="Edit" ><h5><i class="bi bi-pencil-square btn"></i></h5></span>
+        <div class="card-footer row ">
+          <div class="col-6" >
+
+            <p title="Date(dd/mm/yyyy hh:mm:ss)"><span class="badge badge-info">Created</span><span> {{itemTodo.submittedDate}} </span> &nbsp;
+            <span class="badge badge-success">Updated</span><span> {{itemTodo.updatedDate}} </span></p>
+
+          </div>
+
+<div class="col-6 text-end"><button class="btn btn-lg" type="button" (click)="settoeditmode(itemTodo,$event)" >
+<span  title="Edit" ><i class="bi bi-pencil-square btn btn-outline-warning"></i></span>
 </button></div>
+
+
 
         </div>
       </div>
@@ -124,7 +152,7 @@
       </div>
       <div *ngIf="usr_id<1">
         <div class="alert-warning">
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+
           <strong>Warning!</strong> There's no Account found in session , Kindly
           <a routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">Log in</a>
         </div>

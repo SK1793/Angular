@@ -2,14 +2,14 @@ export class UserModel {
 
     userId= Number(window.sessionStorage.getItem('userid'));
     userName= "";
-    userPassword= 0;
+    userPassword= null;
     userMail= "";
     userGender= "";
     userDob= "";
 
 set setuserid(val:number){this.userId=val;}
 set setusermail(val:string){this.userMail=val;}
-set setuserpassword(val:number){this.userPassword=val;}
+set setuserpassword(val:number){this.userPassword!=val;}
 set setusername(val:string){this.userName=val;}
 set setusergender(val:string){this.userGender=val;}
 set setuserdob(val:string){this.userDob=val;}

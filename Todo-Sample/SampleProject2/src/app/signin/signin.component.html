@@ -1,3 +1,4 @@
+<h3 class="text-center">Sign In</h3>
 
 
 <!-- form -->
@@ -12,9 +13,9 @@
 
 <!-- pass input -->
 <div class="form-outline mb-4">
-  <label for="inputName">Email Password</label>
-  <input type="password" class="form-control is-valid m-2"  #userPassword="ngModel" [(ngModel)]="service.UserDataObj.userPassword"
-  name="userPassword" id="userPassword" placeholder="Enter the Password">
+  <label for="inputName"> Password </label>
+  <input type="password" class="form-control is-valid m-2"  #userPassword="ngModel"   [(ngModel)]="service.UserDataObj.userPassword"
+  name="userPassword" id="userPassword" placeholder="Enter the Password" >
 </div>
 
 
@@ -29,7 +30,7 @@
 
       <div class="col">
         <!-- Simple link -->
-        <a class="btn bg-info" routerLink="/forgotPass" routerLinkActive="active" ariaCurrentWhenActive="page"
+        <a class="btn btn-outline-warning" routerLink="/forgotPass" routerLinkActive="active" ariaCurrentWhenActive="page"
         title="Forgot Password">Forgot password</a>
       </div>
     </div>

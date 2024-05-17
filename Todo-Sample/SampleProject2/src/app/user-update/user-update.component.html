@@ -4,7 +4,9 @@
 
 <div *ngFor="let user of service.list_User">
   <!-- <p>user.userid:{{user.userId}}  & usr_id:{{usr_Id}}</p> -->
-  <div class="container-border" *ngIf="user.userId === usr_Id;">
+  <div   *ngIf="user.userId === usr_Id;">
+
+    <!--check if UserId is Session  -->
     <div *ngIf="usr_Id<1">
       <div class="alert-danger">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -12,27 +14,50 @@
       </div>
     </div>
 
-<div class="text-container">
+
+<div class="card px-2 py-2">
+  <div class="text-center" *ngIf="user.userGender.toLowerCase()=='m';else femalePic">
+    <img class="bi-image-fill" src="https://cdn-icons-png.flaticon.com/128/6997/6997674.png" alt={{user.userName}} >
+  </div>
+  <ng-template #femalePic>
+    <div class="text-center">
+      <img  src="https://cdn-icons-png.flaticon.com/128/6997/6997628.png" alt={{user.userName}} >
+    </div>
+  </ng-template>
+
+<div class="text-center">
   <label for="UserName"><h5>User Name</h5></label><p></p>
-  <p class="text-center"><span>{{user.userName}}</span></p>
+  <p class="text-black-50"><span><i class="bi bi-person-badge"></i> {{user.userName}}</span></p>
 </div>
-<div class="text-container">
+<div class="text-center">
+  <label for="UserName"><h5>User Mail</h5></label><p></p>
+  <p class=" text-info"><span><i class="bi bi-mailbox text-black"></i> {{user.userMail}}</span></p>
+</div>
+<div class="text-center">
   <label for="userDob"><h5>User DOB</h5></label><p></p>
-  <p class="text-center"><span>{{user.userDob.toString().substring(0,2)+"/"+user.userDob.toString().substring(2,4)
+  <p class="text-black-50"><span><i class="bi bi-calendar-event"></i> {{user.userDob.toString().substring(0,2)+"/"+user.userDob.toString().substring(2,4)
   +"/"+user.userDob.toString().substring(4)}}</span></p>
 </div>
-<div class="text-container">
+<div class="text-center">
   <label for="userGender"><h5>User Gender</h5></label><p></p>
-  <p class="text-center"><span>{{user.userGender}}</span></p>
+  <div *ngIf="user.userGender.toLowerCase()=='m';else femaleIcon">
+  <p class="text-black-50"><span><i class="bi bi-gender-male"></i> {{user.userGender}}</span></p>
+  </div>
+<ng-template #femaleIcon>
+  <div >
+    <p class="text-black-50"><span><i class="bi bi-gender-female"></i> {{user.userGender}}</span></p>
+    </div>
+</ng-template>
 </div>
-<div>
+<div class="text-center">
   <a class="btn btn-info" (click)="Edit(user)">Edit </a>
+</div>
 </div>
 </div>
 
 </div>  <!--End For -->
 
-<div class="form form-control formSubmitNotes" id="formSubmitNotes" *ngIf="usr_Id>0">
+<div class="form form-control hidden" id="formUpdateUser" *ngIf="usr_Id>0" >
 
   <form #form="ngForm" (submit)="UpdateUserform(form)" >
 
@@ -53,6 +78,11 @@
       <div *ngIf="UpdateSubmitted && userName.touched && userName==null"><span class="text-danger">UserName is required</span></div>
 </div>
 
+<div class="form-control">
+      <label for="userName">User MailId </label>
+      <input type="text" class="form-control" name="userMail"  placeholder="MailId" #userMail="ngModel"
+      [(ngModel)]="service.UserDataObj.userMail" title="User Name" disabled="">
+</div>
 <div class="form-control">
       <label for="userName">User Gender </label>
       <input type="text" class="form-control" name="userGender"  placeholder="Gender(M/F)" #userGender="ngModel"

@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<title>signup Page</title>
-</head>
-<body>
+<h3 class="text-center">Sign Up</h3>
+
 
 <div class="container">
   <form #form="ngForm" (submit)="onsubmitSignup(form)" [class.submitted]="service.SignupSubmitted">
@@ -48,9 +38,10 @@
     <div class="form-group row">
       <label for="inputPassMatch" class="col-sm-1-12 col-form-label">Confirm Password</label>
       <div class="col-sm-1-12">
-        <input type="text" class="form-control" name="UserPassMatch" id="inputPassMatch" placeholder="Confirm Password" required
+        <input type="text" class="form-control" name="UserPassMatch" #UserPassMatch="ngModel" [(ngModel)]="UserPasswordMatch"
+        id="inputPassMatch" placeholder="Confirm Password" required
         >
-        <div *ngIf="UserPasswordMatch!=null && userPassword!=null && userPassword.value!=UserPasswordMatch">
+        <div *ngIf="['UserPassMatch']!=null  && userPassword.value!=['UserPassMatch']">
           <span class="text-danger">*</span>Password Doesn't Match!
         </div>
       </div>
@@ -59,7 +50,10 @@
       <label for="inputDob" class="col-sm-1-12 col-form-label">User DOB(ddmmyyyy)</label>
       <div class="col-sm-1-12">
         <input type="text" class="form-control" name="UserDob" id="inputDob" placeholder="User DOB(DDMMYYYY)" minlength="8" maxlength="8"
-        #userDob="ngModel" [(ngModel)]="service.UserDataObj.userDob" [class.is-invalid]="userDob.touched && userDob==null ">
+        #userDob="ngModel" [(ngModel)]="service.UserDataObj.userDob" [class.is-invalid]="userDob.touched && userDob.invalid ">
+        <div *ngIf="">
+          <span class="text-danger">*</span>Enter DOB correctly
+        </div>
       </div>
     </div>
 
@@ -73,5 +67,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</body>
-</html>
+

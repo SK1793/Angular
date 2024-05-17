@@ -23,7 +23,10 @@ var isLoggedin:boolean;
 })
 
 export class AppComponent implements OnInit,OnChanges{
+
   public SessionStore:any;public userid:string='';public userName:string='';
+  public isCollapsed :boolean=false;
+
 constructor(public service:UserService,private router:Router){}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -36,6 +39,7 @@ constructor(public service:UserService,private router:Router){}
   }
 
   ngOnInit(): void {
+
     this.userid=String(window.sessionStorage.getItem('userid'));
     this.userName=String(window.sessionStorage.getItem('userName'));
 
@@ -85,8 +89,16 @@ RouterModule.forRoot(routes)
     window.sessionStorage.removeItem('userName');
     alert("Logged Out!");
     // console.log("Logged Out!");
-    this.router.navigate(['/todo_list']);
     location.reload();
+    this.router.navigate(['/todo_list']);
+
+  }
+
+
+  setToggler()
+  {
+    this.isCollapsed=!this.isCollapsed;
+
   }
 
   get Username(){
@@ -95,6 +107,11 @@ RouterModule.forRoot(routes)
     get UserId(){
     return this.userid;
   }
+
+  get iscollapsed(){
+    return this.isCollapsed;
+  }
+
 
 [x: string]: any;
   title = 'SampleProject2';

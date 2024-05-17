@@ -8,28 +8,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>To-Do List</title>
 </head>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+<nav class="navbar navbar-expand-md fixed-top bg-light navbar-light">
   <div class="container">
     <a class="navbar-brand" href="#"
        title="Home"><i class="bi bi-house-fill"></i>
     </a>
     <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      class="navbar-toggler" (click)="setToggler()" type="button" data-bs-toggle='collapse' data-bs-target='#someNavbarContent'
+       aria-expanded="false" aria-controls="someNavbarContent" aria-label="Toggle navigation"
     >
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" ></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div  class="collapse navbar-collapse" id="someNavbarContent" [class.collapse]="!isCollapsed">
       <ul class="navbar-nav ms-auto align-items-center">
         <li class="nav-item">
           <a class="nav-link mx-2" routerLink="/" routerLinkActive="activebutton" title="Home"><i class="fas fa-home pe-2"></i>
@@ -48,11 +45,11 @@
         </li>
 
         <li class="nav-item ms-3" [hidden]="userid!='0'">
-          <a class="btn btn-black btn-rounded"  routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">
+          <a class="btn btn-black btn-rounded nav-link"  routerLink="/signin" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">
             <i class="fas fa-sign-in pe-2"></i>SignIn</a>
         </li>
         <li class="nav-item ms-3" [hidden]="userid=='0'">
-          <a class="btn btn-black btn-rounded"  routerLink="/profile" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">
+          <a class="btn btn-black btn-rounded nav-link"  routerLink="/profile" routerLinkActive="activebutton" ariaCurrentWhenActive="page" title="SignIn">
             <i class="fas fa-person pe-2"></i>Account</a>
         </li>
 
@@ -60,70 +57,16 @@
     </div>
   </div>
 </nav>
-<pre></pre>
-<pre></pre>
+<br>
 <!-- Navbar -->
 
 <body>
 
-  <p>HI,<span title="UserName">{{Username?Username:'Guest'}}</span></p>
+  <!-- <p>HI,<span title="UserName">{{Username?Username:'Guest'}}</span></p> -->
 
-  <div class="container">
+  <div class="Appcontainer">
     <router-outlet></router-outlet>
 </div>
-
-  <!--  id not null  -->
-  <!-- <div *ngIf="userid!=null; else elseblock1">
-<p>user id is not null</p>
-<div *ngIf="userid==['0'] ;else elseblock2" >
-
-<p>user id is 0</p> -->
-
-<!--  id not null but 0 -->
-  <!-- <div class="alert-warning">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-    <strong>Warning!</strong> Seems you haven't logged in,Kindly log in
-  </div>
-  <app-signin/>
-
-</div>
-</div> -->
-
-
-  <!--  id is null -->
-
-  <!-- <ng-template #elseblock1 >
-
-    <p>user id is null</p>
-    <div class="alert-warning">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <strong>Warning!</strong> Seems you haven't logged in,Kindly log in
-    </div>
-  </ng-template> -->
-
-  <!--  id not null not 0 i.e a valid user -->
-  <!-- <ng-template #elseblock2>
-    <p>user id is not 0</p>
-    <div class="alert-info">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <strong>Welcome {{userid}}!</strong> Your ToDo's
-    </div>
-    <app-todolist/>
-  </ng-template> -->
-
-<!-- @if(userid!=null ){
-
-  @if (userid=='0') {
-    <script>alert('Please log-in')</script>
-    <app-signin/>
-
-  }@else{
-    <app-todolist/>
-  }
-}
-@else {
-  <app-signin/>
-} -->
 
 
 <!-- <app-signup/> -->
@@ -141,5 +84,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>

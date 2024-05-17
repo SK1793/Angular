@@ -15,6 +15,7 @@ import { UserModel } from '../user-data/user-model.model';
   styleUrls: ['../styles.css']
 })
 
+
 export class TodolistComponent implements OnInit,OnChanges{
 [x: string]: any;
 
@@ -24,10 +25,13 @@ export class TodolistComponent implements OnInit,OnChanges{
  isLoggedin:boolean=false;
  selectedUpdateId:number=0;
  UpdateModel:ToDoModel=new ToDoModel;
+ UpdateItem:any;
+ isListLoaded:boolean=false;
 
 constructor(public service:UserService){
 
 }
+
   ngOnChanges(changes: SimpleChanges): void {
     // if(changes['usr_id']){
     //   usr_id=String(window.sessionStorage.getItem('userid'));
@@ -42,6 +46,11 @@ constructor(public service:UserService){
     let usr_:UserModel;
     this.service.refreshNotesList();
     this.service.refreshUserList();
+    if(document.getElementById('ListCard')?.style.display!="block"){
+      this.isListLoaded=true;
+    }else{
+      this.isListLoaded=false;
+    }
 
     this.usr_id=Number(sessionStorage.getItem('userid'));
     this.usr_name=String(sessionStorage.getItem('userName'));
@@ -77,6 +86,8 @@ constructor(public service:UserService){
   }
 
   onsubmitNotes(form:NgForm){
+
+    // Create a new Date object for IST by adding the time difference
     this.service.TodoFormSubmitted=true;
     if(this.isOptionUpdate){
       if(form.valid){
@@ -85,17 +96,27 @@ constructor(public service:UserService){
         // this.service.UpdateNotes(form);
         if(Number(this.selectedUpdateId)>0){
           // console.log("form: "+this.UpdateModel)
+      // form.form.get('updatedDate')?.setValue(new Date().toLocaleString().split(',')[0]);
+
+          // Get the UTC date and time string
+        form.form.get('updatedDate')?.setValue(new Date().toLocaleString("en-GB"));
       this.service.updateNotes(form,String(this.selectedUpdateId));
+      document.getElementById("NotesAddBtn")!.innerText='add';
+      this.isOptionUpdate=!this.isOptionUpdate;
+      // this.UpdateItem.scrollIntoView();
         }
+
       }
-    }else{
+    }
+    else{
     if(form.valid){
       console.log("for New Note")
-
+      // form.form.get('submittedDate')?.setValue(new Date().toLocaleString().split('P')[0].trim().replace(',','').split(' ')[0]);
+      form.form.get('submittedDate')?.setValue(new Date().toLocaleString("en-GB"));
+      form.form.get('updatedDate')?.setValue(new Date().toLocaleString("en-GB"));
       this.service.putNotes(form);
     }
     }
-
 
   }
 
@@ -106,7 +127,8 @@ deleteNote(item:ToDoModel){
 
 }
 
-settoeditmode(item:ToDoModel){
+settoeditmode(item:ToDoModel,event:Event){
+
   this.isOptionUpdate=!this.isOptionUpdate;
   this.selectedUpdateId=item.id;
   this.UpdateModel=item ;
@@ -117,24 +139,25 @@ settoeditmode(item:ToDoModel){
   console.log("UpadteItem: ");
   console.log(item as ToDoModel);
   console.log(item.id);
-
+  console.log("Event :"+event.target);
 
   // title?.toggleAttribute('enabled');
   // message?.toggleAttribute('enabled');
 
 if(this.isOptionUpdate){
   this.service.TodoDataObj=Object.assign({},item);
-  if(btn!=null)
-  btn.innerText='Update';
+  if(btn!=null){
+
+    btn.innerText='Update';
+  }
+  this.UpdateItem=event.target;
+  document.getElementById('NotesAddForm')!.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 }else{
   this.service.TodoDataObj=new ToDoModel  ;
   if(btn!=null)
   btn.innerText='Add';
 
 }
-
-
-
 
   // if(title?.checkVisibility()){
   //   title?.toggleAttribute('disabled');
@@ -150,3 +173,5 @@ if(this.isOptionUpdate){
   }
 
 }
+
+

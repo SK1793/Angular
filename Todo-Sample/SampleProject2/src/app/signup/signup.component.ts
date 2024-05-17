@@ -32,19 +32,34 @@ export class SignupComponent implements OnInit,OnChanges{
 
 
   onsubmitSignup(form:NgForm){
+    this.isMailExist=false;
     this.service.SignupSubmitted=true;
+    let ispassMatch:boolean=false;
     if(form.valid){
       for(let _user of this.service.list_User){
-
-        if(String(form.form.get('userMail')?.getRawValue)==_user.userMail){
+          console.log('usermail(form): '+form.form.get('userMail')?.value + ' ,Mail(DB): '+_user.userMail);
+          console.log('password(2): '+ String(form.form.get('UserPassMatch')?.value)+
+          ' password(1): '+ form.form.get('userPassword')?.value);
+          if( String(form.form.get('UserPassMatch')?.value)==(form.form.get('userPassword')?.value)){
+            ispassMatch=true;
+          }
+        if( _user.userMail.match(form.form.get('userMail')?.value)){
+          console.log("Mail Matched!")
           this.isMailExist=true;
         }
       }
-      if(this.isMailExist){
 
-        this.UserPasswordMatch=String(form.form.get('UserPassMatch'));
+      if(!this.isMailExist && ispassMatch){
+
+        this.UserPasswordMatch=String(form.form.get('UserPassMatch')?.value);
         this.service.putUsers(form);
-      }else{
+        this.service.SignupSubmitted=true;
+        this.isMailExist=false;
+
+      }else if (!ispassMatch) {
+        alert('Password not Matching.');
+      }
+      else{
         alert('user already exist with this Mail ID');
       }
 

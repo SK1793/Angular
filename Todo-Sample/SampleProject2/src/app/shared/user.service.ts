@@ -56,6 +56,24 @@ export class UserService  {
         console.info(err);
       }
     })
+  }    
+  
+  userPassUpdate(form:NgForm,id:Number){
+    this.http.put(this.url+'/UserDetails/'+id,this.UserDataObj,{headers:this.headers})
+    .subscribe({
+      next:value=> {
+        console.log(value as UserModel)
+        this.list_User=value as UserModel[];
+          // console.log("User Details: \n");
+          // console.log(value);
+          form.form.reset();
+          alert("User Updated!")
+          window.location.reload();
+      },error(err: any) {
+        console.log("Error(reading Api data):\n ");
+        console.info(err);
+      }
+    })
   }
 
 
