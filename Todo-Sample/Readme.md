@@ -4,16 +4,16 @@
 
 <h3>Steps</h3><ol>
   
-<li>Download the Project Zip from the option provided by GitHub Platform</li>
-<li>Open The SampleApi ASP.net Project in Microsoft Visual Studio (if you don't have,Install it from Microsoft Wesbite)</li>
+<li><b>Download</b> the Project Zip from the option provided by GitHub Platform</li>
+<li><b>Open The SampleApi</b> ASP.net Project in Microsoft Visual Studio (if you don't have,Install it from Microsoft Wesbite)</li>
 <li>Go with all the basic Configuration and Installation</li>
-<li>Open the SampleProject2 folder in any Software Dev Kit (Visual Code Preferable ) and install Php and Laravel Extentions if available
+<li>Open the <b>SampleProject2</b> folder in any Software Dev Kit (Visual Code Preferable ) and install <b>Php</b> and  <b>Laravel</b> Extentions if available.
 </li>
-<li>make sure to run Api before running Angular Project to fetch all data from API</li>
-<li>after web server has set run and create an Account and create ToDo's</li>
+<li>Make sure to run Api before running Angular Project to <b>fetch all data from API</b></li>
+<li>After web server has set <b>run</b> and <b>Create an Account and create ToDo's</b></li>
 </ol>
 
-(Note) : if any problems caused please verify the PHP version atleast 8.1 and Laravel as Set in "composer.json" File
+(Note) : if any problems caused please verify the PHP version atleast <b>v8.1</b> and Laravel as Set in <b>"composer.json"</b> File
 
 (P.S-if there are any problems,i would be glad if you Review.)4
 
