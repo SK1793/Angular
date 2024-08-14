@@ -10,7 +10,7 @@
 <li>Open the <b>SampleProject2</b> folder in any Software Dev Kit (Visual Code Preferable ) and install <b>Angular</b> Extentions if available.
 </li>
 <li>Run <b>npm install </b></li>
-<li>Use "ng" command to run project<b>ng serve </b></li>
+<li>Use "ng" command to run project -> <b>ng serve </b></li>
 <li>Make sure to run Api before running Angular Project to <b>fetch all data from API</b></li>
 <li>After web server has set <b>run</b> and <b>Create an Account and create ToDo's</b></li>
 </ol>
