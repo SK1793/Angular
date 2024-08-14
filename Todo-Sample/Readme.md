@@ -17,7 +17,7 @@
 
 (Note) : if any problems caused please verify the Configurations and mainly Angular version <b>v16</b> and it's Compatible libraries.
 
-(P.S-if there are any problems,i would be glad if you Review.)4
+(P.S-if there are any problems,i would be glad if you Review.)
 
 
 <h3>Snapshots</h3>
