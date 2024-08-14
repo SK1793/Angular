@@ -20,7 +20,7 @@
 (P.S-if there are any problems,i would be glad if you Review.)
 
 
-<h3>Snapshots</h3>
+<h3>ScreenShots</h3>
 
 ![Snapshot 1](Documentation/Pictures/Title.png)
 ![Snapshot 2](Documentation/Pictures/HomePage(NotLoggedIn).png)
