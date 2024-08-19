@@ -14,7 +14,7 @@
 ## Setup and Working Video
 
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/v/eoMOvUJPYOc/0.jpg)](https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eoMOvUJPYOc/0.jpg)](https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s)
 
 ## To-Do List
 
