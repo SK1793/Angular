@@ -13,10 +13,7 @@
 
 ## Setup and Working Video
 
-
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eoMOvUJPYOc/0.jpg)](https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eoMOvUJPYOc?si=Sz-yIo5gPhC1X1yz" frameborder="0" allowfullscreen></iframe>
 
 ## To-Do List
 
