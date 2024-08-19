@@ -7,7 +7,7 @@
 <p><b>Frontend </b>: Angular 16 </p> <p><b>Backend </b>: ASP.NET EntityFrameworkCore & MS SQL server management Studio 20 </p> 
 </li>
 <li><label>Database(mySql)</label>  
-<p><b>Tables </b></p>: Users , Notes
+<p><b>Tables </b>: Users , Notes</p>
 </li>
   
 </ul>
