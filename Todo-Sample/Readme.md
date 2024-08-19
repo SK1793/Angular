@@ -1,4 +1,16 @@
-
+##Project Details
+<ul>
+<li><label>Description</label>  
+<p><b>ToDo</b></p> List is a Project to create,Read,Upgrade,Delete *Notes and *Users
+</li>
+<li><label>Software</label>  
+<p><b>Frontend </b></p>: Angular 16 , <p><b>Backend </b></p>: ASP.NET EntityFrameworkCore & MS SQL server management Studio 20  
+</li>
+<li><label>Database(mySql)</label>  
+<p><b>Tables </b></p>: Users , Notes
+</li>
+  
+</ul>
 
 ## To-Do List
 
