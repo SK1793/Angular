@@ -16,7 +16,7 @@
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/eoMOvUJPYOc/0.jpg)](https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s)
 
-<video src="https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s" controls > </video>
+<video href="https://www.youtube.com/watch?v=eoMOvUJPYOc&list=PLznx0KvNkfCDr5SdVsKlpEkBFf79xbYkY&index=3&t=66s" controls > </video>
 
 ## To-Do List
 
